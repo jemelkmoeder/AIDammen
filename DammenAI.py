@@ -22,11 +22,7 @@ st.markdown("""<style>.stApp {background-image: url("https://img.freepik.com/fre
  
 censor = st.checkbox("Do you want to censor dark jokes? (These can be hurtful to some people)", value=True)
 if not censor:
-    age_confirm = st.radio(
-        "Ben je 16 jaar of ouder?", 
-        ("Ja", "Nee")
-    )
-
+    st.warning("You need to be 16+ to disable the censor!")
 
 subject = st.text_input("What subject do you want to hear a joke about?")
 selected_category = st.selectbox("Choose a joke category:", ["Any"] + categories)
