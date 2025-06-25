@@ -20,7 +20,7 @@ st.markdown("""<style>.stApp {background-image: url("https://img.freepik.com/fre
         background-repeat: no-repeat;
         background-attachment: fixed;}</style>""", unsafe_allow_html=True)
  
-censor = st.checkbox("Do you want to censor dark jokes? (These can be hurtful to some people) ")
+censor = st.checkbox("Do you want to censor dark jokes? (These can be hurtful to some people) " value = true)
 subject = st.text_input("What subject do you want to hear a joke about?")
 selected_category = st.selectbox("Choose a joke category:", ["Any"] + categories)
 generate = st.button("Generate Joke")
