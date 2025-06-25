@@ -6,7 +6,7 @@ from better_profanity import profanity
 # Gebruik de nieuwe dataset met een 'Category'-kolom
 df = pd.read_csv("all_jokes_combined_categorized.csv")
 jokes = df["Joke"].dropna()
-categories = df["Category"].dropna().unique().tolist()
+categories = sorted(df["Category"].dropna().unique().tolist())  # ✅ Gesorteerde categorieën
  
 blocked_words = ["black", "lack people", "lack person", "ack", "ck people", "ck person", "k people", "k person", 
                  "farming equipment", "terrorist", "knee", "grow", "snickers", "nickers", "nicker", 
