@@ -4,7 +4,7 @@ import random
 from better_profanity import profanity
  
 # Gebruik de nieuwe dataset met een 'Category'-kolom
-df = pd.read_csv("shortjokes_with_categories.csv")
+df = pd.read_csv("all_jokes_combined_categorized.csv")
 jokes = df["Joke"].dropna()
 categories = df["Category"].dropna().unique().tolist()
  
